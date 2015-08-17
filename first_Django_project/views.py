@@ -6,6 +6,11 @@ from django.shortcuts import render_to_response
 def hello(request):
     return HttpResponse('Hello World!')
 
+def display_meta(request):
+    values = request.META.items()
+    values.sort()
+    return render_to_response('meta.html', locals())
+
 def my_homepage_view(request):
     return HttpResponse('Welcome To My Home--page!!')
 

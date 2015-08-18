@@ -28,6 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+#I only need this for running through some tutorials. I don't need it to actually send mail.
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
 # Application definition
 
 INSTALLED_APPS = (

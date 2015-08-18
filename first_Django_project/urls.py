@@ -18,7 +18,7 @@ from django.contrib import admin
 
 from first_Django_project.views import hello, my_homepage_view, current_datetime, hours_ahead, display_meta
 from books.views import search_form, search
-from contact.views import contact
+from contact.views import contact, thanks
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^hello/$', hello),
@@ -29,4 +29,5 @@ urlpatterns = [
     url(r'^search-form/$', search_form),
     url(r'^search/$', search),
     url(r'^contact/$', contact),
+    url(r'^contact/thanks/$', thanks),
 ]
